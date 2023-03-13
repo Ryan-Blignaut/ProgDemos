@@ -16,5 +16,10 @@ public static class Program
 		proxy = new AuthenticatedHttpServiceProxy("Admin", "wrongPassword");
 		Console.WriteLine("Sending a request with invalid credentials");
 		Console.WriteLine("Public Ip gotten from Api: " + proxy.SendGetRequest("http://checkip.amazonaws.com/"));
+
+		// Example of protection of the real service
+		HttpService httpService = new HttpService();
+		// This give an error ->
+		// httpService.SendGetRequest("");
 	}
 }

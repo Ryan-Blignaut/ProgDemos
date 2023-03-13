@@ -1,9 +1,10 @@
 ﻿namespace ProgDemos.DesignPattern.Proxy;
 
+// This is the real service.
 public class HttpService : IHttpService
 {
-	// Implementation of the IHttpService interface, this is used to send the HTTP request
-	public string SendGetRequest(string url)
+	// Implementation of the IHttpService interface, this interface is implemented explicitly to prevent the user from using the real service directly.
+	string IHttpService.SendGetRequest(string url)
 	{
 		Console.WriteLine("Real Http Service: Sending a GET request to " + url);
 		// Send an HTTP request

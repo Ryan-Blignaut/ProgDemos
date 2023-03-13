@@ -2,15 +2,15 @@
 
 public interface IHttpService
 {
+	// No public methods are exposed in this interface, this is to prevent the user from using the real service directly.
 	// In this example, we are only interested in the GET method
-	public string SendGetRequest(string url);
+	string SendGetRequest(string url);
 
-	
-	
+
 	// The following methods are not used in this example but would be used in a real-world scenario
-	
-	// public string SendPutRequest(string url, string requestData);
-	// public string SendDeleteRequest(string url, string requestData);
-	// public string SendPatchRequest(string url, string requestData);
-	// public string SendPostRequest(string url, string requestData);
+
+	// string SendPutRequest(string url, string requestData);
+	// string SendDeleteRequest(string url, string requestData);
+	// string SendPatchRequest(string url, string requestData);
+	// string SendPostRequest(string url, string requestData);
 }
